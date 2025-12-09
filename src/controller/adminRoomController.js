@@ -1,5 +1,6 @@
 import AdminRoom from "../models/AdminRoom.js";
 
+
 // CREATE ROOM
 export const createRoom = async (req, res) => {
   try {

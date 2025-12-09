@@ -1,8 +1,9 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import connectDB from "./config/db.js";
-import adminRoomRoutes from "./routes/adminRoomRoutes.js";
+import connectDB from "./src/config/db.js";
+
+import adminRoomRoutes from './src/routes/adminRoomRoutes.js'
 
 dotenv.config();
 connectDB();
