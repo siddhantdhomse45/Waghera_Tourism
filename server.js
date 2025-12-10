@@ -9,6 +9,9 @@ import reviewRoutes from './src/routes/review.js'
 import contactRoutes from './src/routes/contact.js'
 import authRoutes from './src/routes/auth.js'
 
+import bookingRoutes  from './src/routes/bookingRoutes.js'
+import availabilityRoutes from './src/routes/availabilityRoutes.js'
+
 dotenv.config();
 connectDB();
 
@@ -25,10 +28,19 @@ app.use("/api/gallery", galleryRoutes);
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/bookings", bookingRoutes);
+app.use("/api/availability", availabilityRoutes);
 // Catch all for unhandled routes
 app.use((req, res) => {
   res.status(404).json({ message: "API endpoint not found" });
 });
+
+
+
+
+// foloowing chnages by prasad 
+
+
 
 // Start server
 const PORT = process.env.PORT || 5000;
